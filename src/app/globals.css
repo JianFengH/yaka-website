@@ -25,3 +25,36 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+.mainTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #222;
+  position: relative;
+}
+
+.mainTitle::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(90deg, #0085ff 0.08%, #fff 49%, #00f0db 97.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  clip-path: ellipse(80px 80px at 0% 50%);
+  animation: move 8s ease-in-out infinite;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+@keyframes move {
+  50% {
+    clip-path: ellipse(60px 60px at 100% 50%);
+  }
+
+  100% {
+    clip-path: ellipse(60px 60px at 0% 50%);
+  }
+}
+

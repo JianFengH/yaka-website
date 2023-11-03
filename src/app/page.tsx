@@ -3,8 +3,12 @@ import Navbar from '@/components/Navbar'
 export default function Home() {
   return <>
     <Navbar current='' />
-    <main className="">
-
+    <main className='flex flex-col justify-center items-center pt-20'>
+      <div className='mainTitle after:content-[attr(data-text)] sm:text-6xl sm:after:text-6xl' data-text='Launchpad+Ve(3,3)DEX'>Launchpad+Ve(3,3)DEX</div>
+      <div className='text-center text-base mt-12 sm:text-2xl'>
+        Liquidity and Focus Center on SEI:
+        <br />The Engine for Rapid Growth of the SEI Ecosystem
+      </div>
     </main>
   </>
 }
