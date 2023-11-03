@@ -10,15 +10,17 @@ export default function Home({ current }: { current: string }) {
 
   return (
     <Navbar>
-      <NavbarBrand>
-        <Image
-          src="/logo.svg"
-          alt="Yaka Logo"
-          width={100}
-          height={24}
-          priority
-        />
-      </NavbarBrand>
+      <NavbarContent justify="start">
+        <NavbarBrand>
+          <Image
+            src="/logo.svg"
+            alt="Yaka Logo"
+            width={100}
+            height={24}
+            priority
+          />
+        </NavbarBrand>
+      </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {menus.map((item) => (
           <NavbarItem key={item.name} isActive={current === item.name}>
