@@ -7,19 +7,22 @@ export default function NavbarCustom({ current }: { current: string }) {
     { name: 'Swap', href: '#' },
     { name: 'Dashboard', href: '#' },
     { name: 'Liquidity', href: '#' },
+    { name: 'WalletTest', href: '/wallet_test' },
   ];
 
   return (
     <Navbar>
       <NavbarContent justify="start">
         <NavbarBrand>
-          <Image
-            src="/logo.svg"
-            alt="Yaka Logo"
-            width={100}
-            height={24}
-            priority
-          />
+          <Link href="/">
+            <Image
+              src="/logo.svg"
+              alt="Yaka Logo"
+              width={100}
+              height={24}
+              priority
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
