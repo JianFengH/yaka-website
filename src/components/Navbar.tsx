@@ -1,7 +1,8 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import Image from "next/image";
+import WalletConnect from "./WalletConnect";
 
-export default function Home({ current }: { current: string }) {
+export default function NavbarCustom({ current }: { current: string }) {
   const menus = [
     { name: 'Swap', href: '#' },
     { name: 'Dashboard', href: '#' },
@@ -32,9 +33,9 @@ export default function Home({ current }: { current: string }) {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex" justify="end">
+      <NavbarContent className="sm:flex" justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="" variant="flat">Connect</Button>
+          <WalletConnect />
         </NavbarItem>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">

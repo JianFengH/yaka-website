@@ -12,7 +12,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           restUrl: 'https://rest.atlantic-2.seinetwork.io',
           rpcUrl: 'https://rpc.atlantic-2.seinetwork.io'
         }}
-        wallets={['compass', 'fin', 'keplr']}>
+        wallets={['compass', 'fin', 'keplr', 'leap']}>
         {children}
       </SeiWalletProvider>
     </NextUIProvider>
