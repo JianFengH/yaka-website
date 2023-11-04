@@ -12,7 +12,7 @@ export default function WalletConnect() {
   </>
 
   return <>
-    <Snippet symbol="" >
+    <Snippet symbol="">
       <h2 className="max-w-[100px] truncate">{accounts[0].address}</h2>
     </Snippet>
   </>
