@@ -1,4 +1,4 @@
-import { Navbar as Navbarui, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
+import { Navbar as NavbarNextUI, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import Image from "next/image";
 import WalletConnect from "./wallet-connect";
 
@@ -11,7 +11,7 @@ export default function Navbar({ current }: { current: string }) {
   ];
 
   return (
-    <Navbarui>
+    <NavbarNextUI>
       <NavbarContent justify="start">
         <NavbarBrand>
           <Link href="/">
@@ -57,6 +57,6 @@ export default function Navbar({ current }: { current: string }) {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </Navbarui>
+    </NavbarNextUI>
   )
 }
