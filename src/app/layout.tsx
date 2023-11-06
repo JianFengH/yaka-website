@@ -4,6 +4,7 @@ import './globals.css'
 import { Providers } from './providers'
 import { Link } from '@nextui-org/react'
 import Image from 'next/image'
+import Navbar from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +23,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <div className="box-border min-h-screen flex flex-col">
-            <div className="grow">{children}</div>
+            <Navbar />
+            <main className="grow">{children}</main>
             <footer className="grow-0 shrink-0 w-full max-w-5xl mx-auto px-6 py-2 flex justify-between">
               <small>
                 Copyright © 2023 YAKA

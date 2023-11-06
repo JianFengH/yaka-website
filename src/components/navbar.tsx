@@ -1,13 +1,16 @@
+'use client'
+
 import { Navbar as NavbarNextUI, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import Image from "next/image";
 import WalletConnect from "./wallet-connect";
+import { usePathname } from "next/navigation";
 
-export default function Navbar({ current }: { current: string }) {
+export default function Navbar() {
+  const pathname = usePathname()
   const menus = [
-    { name: 'Swap', href: '#' },
-    { name: 'Dashboard', href: '#' },
-    { name: 'Liquidity', href: '#' },
-    { name: 'WalletTest', href: '/wallet-test' },
+    { name: 'Swap', path: '/swap' },
+    { name: 'Liquidity', path: '/liquidity' },
+    { name: 'WalletTest', path: '/wallet-test' },
   ];
 
   return (
@@ -26,12 +29,12 @@ export default function Navbar({ current }: { current: string }) {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {menus.map((item) => (
-          <NavbarItem key={item.name} isActive={current === item.name}>
+        {menus.map(({name, path}) => (
+          <NavbarItem key={name} isActive={path === pathname}>
             <Link
-              color={current === item.name ? 'primary' : 'foreground'}
-              href={item.href}>
-              {item.name}
+              color={path === pathname ? 'primary' : 'foreground'}
+              href={path}>
+              {name}
             </Link>
           </NavbarItem>
         ))}
@@ -45,14 +48,14 @@ export default function Navbar({ current }: { current: string }) {
         <NavbarMenuToggle />
       </NavbarContent>
       <NavbarMenu>
-        {menus.map((item) => (
-          <NavbarMenuItem key={item.name}>
+        {menus.map(({name, path}) => (
+          <NavbarMenuItem key={name}>
             <Link
-              color={current === item.name ? 'primary' : 'foreground'}
-              href={item.href}
+              color={path === pathname ? 'primary' : 'foreground'}
+              href={path}
               className="w-full"
               size="lg">
-              {item.name}
+              {name}
             </Link>
           </NavbarMenuItem>
         ))}
