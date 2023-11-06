@@ -1,5 +1,3 @@
-import Navbar from '@/components/navbar'
-
 export default function Home() {
   return (
     <div className='absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center'>

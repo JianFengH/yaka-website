@@ -1,4 +1,3 @@
-import Navbar from '@/components/navbar'
 import WalletTest from './wallet-test'
 
 export default function Home() {
