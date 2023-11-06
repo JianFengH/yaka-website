@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar'
-import WalletTest from './WalletTest'
+import Navbar from '@/components/navbar'
+import WalletTest from './wallet-test'
 
 export default function Home() {
   return <>
