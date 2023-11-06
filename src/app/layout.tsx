@@ -24,7 +24,7 @@ export default function RootLayout({
         <Providers>
           <div className="box-border min-h-screen flex flex-col">
             <Navbar />
-            <main className="grow">{children}</main>
+            <main className="grow relative">{children}</main>
             <footer className="grow-0 shrink-0 w-full max-w-5xl mx-auto px-6 py-2 flex justify-between">
               <small>
                 Copyright © 2023 YAKA
